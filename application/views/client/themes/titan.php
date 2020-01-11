@@ -171,8 +171,10 @@
               <?php echo $this->user->info->username ?>
               <?php endif; ?></a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="<?php echo site_url() ?>"><?php echo lang("ctn_2") ?></a></li>
               <li><a href="<?php echo site_url("profile/" . $this->user->info->username) ?>"><?php echo lang("ctn_491") ?></a></li>
-              <li><a href="<?php echo site_url("pages/your") ?>"><?php echo lang("ctn_492") ?></a></li>
+              <li><a href="<?php echo site_url("pages/your") ?>"><?php echo lang("
+              ctn_492") ?></a></li>
               <li><a href="<?php echo site_url("profile/friends/" . $this->user->info->ID) ?>"><?php echo lang("ctn_493") ?></a></li>
               <li><a href="<?php echo site_url("user_settings") ?>"><?php echo lang("ctn_156") ?></a></li>
               <?php if($this->common->has_permissions(array("admin", "admin_members", "admin_payment", "admin_settings"), $this->user)) : ?>
