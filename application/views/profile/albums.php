@@ -59,7 +59,7 @@
 </div>
 
 <?php if($this->user->loggedin && $user->ID == $this->user->info->ID) : ?>
-<input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_555") ?>" data-toggle="modal" data-target="#addModal">
+<input type="button" class="btn btn-sm btn-create-albums" value="<?php echo lang("ctn_555") ?>" data-toggle="modal" data-target="#addModal">
 <?php endif; ?>
 </div>
 </div>
