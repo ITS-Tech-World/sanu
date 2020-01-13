@@ -352,3 +352,4 @@ p.mail-reply-button input{ background-color: #a41be3; color: #fff; }
 ul.settings-sidebar li a { color: #a41be3; }
 .breadcrumb li a { color: #a41be3 ; }
 .panel-body .form-group a { color: #a41be3; }
+.paginate_button.active a {background-color: #a41be3;}

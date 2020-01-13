@@ -42,7 +42,7 @@
 		    <option value="100.00"><?php echo $this->settings->info->payment_symbol ?>100.00 - 100 <?php echo lang("ctn_350") ?></option>
 		    </select>
 		  </div>
-		  <button type="submit" class="btn btn-primary"><?php echo lang("ctn_249") ?></button>
+		  <button type="submit" class="btn btn-post"><?php echo lang("ctn_249") ?></button>
 		</form>
 		</center>
 
