@@ -131,7 +131,7 @@ table.dataTable { width: 100% !important; }
 .feed-content img { max-width: 100%; }
 .feed-content iframe { max-width: 100%; }
 .feed-footer { background: #f6f6f6; border-top: 1px solid #DDD; padding-left: 10px; }
-.active-like { font-weight: bold; color: #0a88bd; }
+.active-like { font-weight: bold; color: #a41be3; }
 .feed-content-stats { border-top: 1px solid #DDD; font-size: 11px; margin-top: 10px; padding: 10px; padding-left: 19px; }
 .feed-stat { margin-right: 10px; }
 .feed-content-stat-likes { width: 40px; text-align: center; position: absolute; right: -15px; top: 80px; padding: 5px; font-size: 8px; background: #FFF; border-radius: 20px; border: 1px solid #DDD;}

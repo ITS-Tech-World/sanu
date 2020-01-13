@@ -61,7 +61,7 @@ $("#pagination2 a").on('click',function(e){
 <div class="mail-reply-textbox">
 <?php echo form_open(site_url("chat/reply/" . $mail->ID)) ?>
 <textarea name="reply" rows="5" id="mail-reply-textarea"></textarea>
-<p class="mail-reply-button"><input type="submit" name="s" value="<?php echo lang("ctn_480") ?>" class="btn btn-primary form-control"></p>
+<p class="mail-reply-button"><input type="submit" name="s" value="<?php echo lang("ctn_480") ?>" class="btn form-control"></p>
 <?php echo form_close() ?>
 </div>
 

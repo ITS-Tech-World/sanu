@@ -211,7 +211,7 @@
 	      <input type="checkbox" name="profile_comments" value="1" <?php if($this->user->info->profile_comments) echo "checked" ?>>
 	    </div>
 	</div>
-	 <input type="submit" name="s" value="<?php echo lang("ctn_236") ?>" class="btn btn-primary form-control" />
+	 <input type="submit" name="s" value="<?php echo lang("ctn_236") ?>" class="btn btn-post form-control" />
 <?php echo form_close() ?>
 </div>
 </div>
