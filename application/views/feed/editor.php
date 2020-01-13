@@ -44,7 +44,7 @@ if(isset($postAs)) {
       <?php endforeach; ?>
     </li>
   </ul>
-  <input type="submit" class="btn btn-primary btn-sm pull-right" value="<?php echo lang("ctn_506") ?>">
+  <input type="submit" class="btn btn-post btn-sm pull-right" value="<?php echo lang("ctn_506") ?>">
 
 
 </div>

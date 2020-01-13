@@ -156,7 +156,7 @@
 
     </div>
     <div id="footer" class="clearfix">
-      <span class="pull-left"><?php echo lang("ctn_170") ?> <a href="https://www.patchesoft.com/">Patchesoft</a> <?php echo $this->settings->info->site_name ?> V<?php echo $this->settings->version ?></span> <span class="pull-right"><a href="<?php echo site_url("home/change_language") ?>"><?php echo lang("ctn_171") ?></a></span>
+      <span class="pull-left"><?php echo lang("ctn_170") ?> <a href="https://itstechworld.com/"> ITS Tech World </a> <?php echo $this->settings->info->site_name ?> V<?php echo $this->settings->version ?></span> <span class="pull-right"><a href="<?php echo site_url("home/change_language") ?>"><?php echo lang("ctn_171") ?></a></span>
     </div>
 
     <!-- SCRIPTS -->
