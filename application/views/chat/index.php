@@ -18,7 +18,7 @@ load_mail(<?php echo $default_mail ?>, <?php echo $page ?>);
 <div class="row">
 <div class="col-md-5 mail-border-top mail-border-right no-padding">
 <div class="mail-box-snippet">
-<button onclick="compose()" class="btn btn-primary btn-sm"><?php echo lang("ctn_472") ?></button>
+<button onclick="compose()" class="btn btn-sm"><?php echo lang("ctn_472") ?></button>
 </div>
 <div class="mail-box-snippet">
 <?php echo form_open(site_url("chat/search")) ?>

@@ -2,25 +2,25 @@
         <div class="col-md-2 sidebar-block" id="homepage-links">
 
         <ul>
-        <li <?php if($type == 0) : ?>class="active"<?php endif; ?>><a href="<?php echo site_url("home") ?>"><span class="glyphicon glyphicon-home" style="color: #4490f6"></span> <?php echo lang("ctn_481") ?></a></li>
-        <li><a href="<?php echo site_url("profile/" . $this->user->info->username) ?>"><span class="glyphicon glyphicon-user sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_200") ?></a></li>
-        <li><a href="<?php echo site_url("chat") ?>"><span class="glyphicon glyphicon-envelope sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_482") ?></a></li>
+        <li <?php if($type == 0) : ?>class="active"<?php endif; ?>><a href="<?php echo site_url("home") ?>"><span class="glyphicon glyphicon-home" style="color: #a41be3"></span> <?php echo lang("ctn_481") ?></a></li>
+        <li><a href="<?php echo site_url("profile/" . $this->user->info->username) ?>"><span class="glyphicon glyphicon-user sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_200") ?></a></li>
+        <li><a href="<?php echo site_url("chat") ?>"><span class="glyphicon glyphicon-envelope sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_482") ?></a></li>
         <?php if($this->settings->info->enable_blogs) : ?>
-          <li><a href="<?php echo site_url("blog/your") ?>"><span class="glyphicon glyphicon-pencil sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_780") ?></a></li>
+          <li><a href="<?php echo site_url("blog/your") ?>"><span class="glyphicon glyphicon-pencil sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_780") ?></a></li>
         <?php endif; ?>
-        <li><a href="<?php echo site_url("user_settings") ?>"><span class="glyphicon glyphicon-cog sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_156") ?></a></li>
+        <li><a href="<?php echo site_url("user_settings") ?>"><span class="glyphicon glyphicon-cog sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_156") ?></a></li>
         </ul>
 
         <p class="sidebar-title"><?php echo lang("ctn_525") ?></p>
         <ul>
-        <li><a href="<?php echo site_url("profile/albums/" . $this->user->info->ID) ?>"><span class="glyphicon glyphicon-picture sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_483") ?></a></li>
-        <li><a href="<?php echo site_url("pages/your") ?>"><span class="glyphicon glyphicon-duplicate sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_484") ?></a></li>
+        <li><a href="<?php echo site_url("profile/albums/" . $this->user->info->ID) ?>"><span class="glyphicon glyphicon-picture sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_483") ?></a></li>
+        <li><a href="<?php echo site_url("pages/your") ?>"><span class="glyphicon glyphicon-duplicate sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_484") ?></a></li>
         <?php if($this->settings->info->enable_blogs) : ?>
-          <li><a href="<?php echo site_url("blog/new_posts") ?>"><span class="glyphicon glyphicon-pencil sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_772") ?></a></li>
+          <li><a href="<?php echo site_url("blog/new_posts") ?>"><span class="glyphicon glyphicon-pencil sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_772") ?></a></li>
         <?php endif; ?>
-        <li <?php if($type == 2) : ?>class="active"<?php endif; ?>><a href="<?php echo site_url("home/index/2") ?>"><span class="glyphicon glyphicon-list-alt sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_485") ?></a></li>
+        <li <?php if($type == 2) : ?>class="active"<?php endif; ?>><a href="<?php echo site_url("home/index/2") ?>"><span class="glyphicon glyphicon-list-alt sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_485") ?></a></li>
         <?php if($this->settings->info->payment_enabled) : ?>
-        <li><a href="<?php echo site_url("funds") ?>"><span class="glyphicon glyphicon-piggy-bank sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_250") ?></a></li>
+        <li><a href="<?php echo site_url("funds") ?>"><span class="glyphicon glyphicon-piggy-bank sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_250") ?></a></li>
         <?php endif; ?>
         </ul>
         <?php if($this->common->has_permissions(array("admin", "admin_members", "admin_payment", "admin_settings", "post_admin", "page_admin"), $this->user)) : ?>
@@ -28,13 +28,13 @@
           <ul>
         <?php endif; ?>
         <?php if($this->common->has_permissions(array("admin", "admin_members", "admin_payment", "admin_settings"), $this->user)) : ?>
-        <li><a href="<?php echo site_url("admin") ?>"><span class="glyphicon glyphicon-tower sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_35") ?></a></li>
+        <li><a href="<?php echo site_url("admin") ?>"><span class="glyphicon glyphicon-tower sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_35") ?></a></li>
         <?php endif; ?>
         <?php if($this->common->has_permissions(array("admin", "post_admin"), $this->user)) : ?>
-          <li <?php if($type == 4) : ?>class="active"<?php endif; ?>><a href="<?php echo site_url("home/index/4") ?>"><span class="glyphicon glyphicon-tower sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_486") ?></a></li>
+          <li <?php if($type == 4) : ?>class="active"<?php endif; ?>><a href="<?php echo site_url("home/index/4") ?>"><span class="glyphicon glyphicon-tower sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_486") ?></a></li>
         <?php endif; ?>
         <?php if($this->common->has_permissions(array("admin", "page_admin"), $this->user)) : ?>
-          <li><a href="<?php echo site_url("pages/all") ?>"><span class="glyphicon glyphicon-tower sidebaricon" style="color: #4490f6"></span> <?php echo lang("ctn_487") ?></a></li>
+          <li><a href="<?php echo site_url("pages/all") ?>"><span class="glyphicon glyphicon-tower sidebaricon" style="color: #a41be3"></span> <?php echo lang("ctn_487") ?></a></li>
         <?php endif; ?>
         <?php if($this->common->has_permissions(array("admin", "admin_members", "admin_payment", "admin_settings", "post_admin", "page_admin"), $this->user)) : ?>
         </ul>

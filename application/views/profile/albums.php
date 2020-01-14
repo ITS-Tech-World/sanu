@@ -47,7 +47,7 @@
 <input type="text" class="form-control input-sm" placeholder="<?php echo lang("ctn_336") ?>" id="form-search-input" />
 <div class="input-group-btn">
     <input type="hidden" id="search_type" value="0">
-        <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-sm dropdown-toggle btn_search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
         <ul class="dropdown-menu small-text" style="min-width: 90px !important; left: -90px;">
           <li><a href="#" onclick="change_search(0)"><span class="glyphicon glyphicon-ok" id="search-like"></span> <?php echo lang("ctn_337") ?></a></li>
@@ -59,7 +59,7 @@
 </div>
 
 <?php if($this->user->loggedin && $user->ID == $this->user->info->ID) : ?>
-<input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_555") ?>" data-toggle="modal" data-target="#addModal">
+<input type="button" class="btn btn-sm btn-create-albums" value="<?php echo lang("ctn_555") ?>" data-toggle="modal" data-target="#addModal">
 <?php endif; ?>
 </div>
 </div>

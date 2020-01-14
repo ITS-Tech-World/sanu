@@ -11,7 +11,7 @@
                             <input type="text" class="form-control input-sm" placeholder="<?php echo lang("ctn_336") ?>" id="form-search-input" />
                             <div class="input-group-btn">
                                 <input type="hidden" id="search_type" value="0">
-                                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button type="button" class="btn btn_search btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                     <ul class="dropdown-menu small-text" style="min-width: 90px !important; left: -90px;">
                                       <li><a href="#" onclick="change_search(0)"><span class="glyphicon glyphicon-ok" id="search-like"></span> <?php echo lang("ctn_337") ?></a></li>
@@ -27,7 +27,7 @@
 
                             <?php if( (isset($member) && $member != null && $member->roleid == 1) || ($this->common->has_permissions(array("admin", "page_admin", "page_creator"), $this->user)) ) : ?> 
 
-                        <a href="<?php echo site_url("pages/add") ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_531") ?></a>
+                        <a href="<?php echo site_url("pages/add") ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_531") ?></a>
                       <?php endif; ?>
 				</div>
 				</div>
