@@ -131,8 +131,14 @@ class Register extends CI_Controller
 				$fail = lang("error_18");
 			}
 
-			if (!valid_email($email)) {
-				$fail = lang("error_19");
+			if($this->session->userdata("mobile_otp")){
+				if ($email != '/^[0-9,]+$/')) {
+					$field_errors['email'] = lang("error_193");
+				}
+			}else{
+				if (!valid_email($email)) {
+					$field_errors['email'] = lang("error_193");
+				}
 			}
 
 			if (!$this->register_model->checkEmailIsFree($email)) {
@@ -247,37 +253,44 @@ class Register extends CI_Controller
 				$activate_code = "";
 				$success =  lang("success_20");
 				if($this->settings->info->activate_account) {
-					$active = 0;
-					$activate_code = md5(rand(1,10000000000) . "fhsf" . rand(1,100000));
-					$success = lang("success_33");
+					if($this->session->userdata("mobile_otp")){
+						$active = 0;
+						$success =  lang("success_117");
+						mobile_otp($email);
+					}else{
+						$active = 0;
+						$activate_code = md5(rand(1,10000000000) . "fhsf" . rand(1,100000));
+						$success = lang("success_33");
 
-					if(!isset($_COOKIE['language'])) {
-						// Get first language in list as default
-						$lang = $this->config->item("language");
-					} else {
-						$lang = $this->common->nohtml($_COOKIE["language"]);
+						if(!isset($_COOKIE['language'])) {
+							// Get first language in list as default
+							$lang = $this->config->item("language");
+						} else {
+							$lang = $this->common->nohtml($_COOKIE["language"]);
+						}
+
+						// Send Email
+						$email_template = $this->home_model
+							->get_email_template_hook("email_activation", $lang);
+						if($email_template->num_rows() == 0) {
+							$this->template->error(lang("error_48"));
+						}
+						$email_template = $email_template->row();
+
+						$email_template->message = $this->common->replace_keywords(array(
+							"[NAME]" => $username,
+							"[SITE_URL]" => site_url(),
+							"[EMAIL_LINK]" => 
+								site_url("register/activate_account/" . $activate_code . 
+									"/" . $username),
+							"[SITE_NAME]" =>  $this->settings->info->site_name
+							),
+						$email_template->message);
+
+						$this->common->send_email($email_template->title,
+							$email_template->message, $email);
 					}
-
-					// Send Email
-					$email_template = $this->home_model
-						->get_email_template_hook("email_activation", $lang);
-					if($email_template->num_rows() == 0) {
-						$this->template->error(lang("error_48"));
-					}
-					$email_template = $email_template->row();
-
-					$email_template->message = $this->common->replace_keywords(array(
-						"[NAME]" => $username,
-						"[SITE_URL]" => site_url(),
-						"[EMAIL_LINK]" => 
-							site_url("register/activate_account/" . $activate_code . 
-								"/" . $username),
-						"[SITE_NAME]" =>  $this->settings->info->site_name
-						),
-					$email_template->message);
-
-					$this->common->send_email($email_template->title,
-						 $email_template->message, $email);
+					
 				}
 
 				$userid = $this->register_model->add_user(array(
@@ -326,7 +339,11 @@ class Register extends CI_Controller
 					);
 				}
 				$this->session->set_flashdata("globalmsg", $success);
-				redirect(site_url("login"));
+				if($this->session->userdata("mobile_otp")){
+					redirect(site_url("register/mobile_registration"));
+				}else{
+					redirect(site_url("login"));
+				}
 			}
 
 		}
@@ -362,8 +379,6 @@ class Register extends CI_Controller
 	{
 		$formData = $this->input->post("formData");
 		parse_str($formData, $data);
-
-
 
 		if ($this->user_model->check_block_ip()) {
 			$this->template->jsonError(lang("error_26"));
@@ -450,8 +465,12 @@ class Register extends CI_Controller
 			$field_errors['email'] = lang("error_18");
 		}
 
-		if (!valid_email($email)) {
-			$field_errors['email'] = lang("error_19");
+		if($this->session->userdata("mobile_otp")){
+
+		}else{
+			if (!valid_email($email)) {
+				$field_errors['email'] = lang("error_193");
+			}
 		}
 
 		if (!$this->register_model->checkEmailIsFree($email)) {
@@ -632,27 +651,43 @@ class Register extends CI_Controller
 	}
 
 	public function check_email() 
-	{
+	{	
 		$this->load->helper('email');
 		$email = $this->input->get("email");
+		$email_input = explode("@",$email);
 		$field_errors = array();
+		if(count($email_input) > 1){
+			if (empty($email)) {
+				$field_errors['email'] = lang("error_18");
+			}
 
-		if (empty($email)) {
-			$field_errors['email'] = lang("error_18");
-		}
+			if (!valid_email($email)) {
+				$field_errors['email'] = lang("error_19");
+			}
 
-		if (!valid_email($email)) {
-			$field_errors['email'] = lang("error_19");
-		}
+			if (!$this->register_model->checkEmailIsFree($email)) {
+				$field_errors['email'] = lang("error_20");
+			}
 
-		if (!$this->register_model->checkEmailIsFree($email)) {
-			$field_errors['email'] = lang("error_20");
-		}
-
-		if(empty($field_errors)) {
-			echo json_encode(array("success" => 1));
-		} else {
-			echo json_encode(array("field_errors" => 1,"fieldErrors" => $field_errors));
+			if(empty($field_errors)) {
+				echo json_encode(array("success" => 1));
+			} else {
+				echo json_encode(array("field_errors" => 1,"fieldErrors" => $field_errors));
+			}
+		}else{
+			if (empty($email)) {
+				$field_errors['email'] = lang("error_18");
+			}
+			if(empty($field_errors)) {
+				$this->session->unset_userdata("mobile_otp");
+	        	$otp = rand(100000,999999);
+				$this->session->set_userdata("mobile_otp",$otp);
+				$this->session->set_userdata("mobile_number",$email);
+				$this->session->mark_as_temp('mobile_otp', 60);
+				echo json_encode(array("success" => 1));
+			} else {
+				echo json_encode(array("field_errors" => 1,"fieldErrors" => $field_errors));
+			}
 		}
 
 		exit();
@@ -777,6 +812,44 @@ class Register extends CI_Controller
 		$this->session->set_flashdata("globalmsg", 
 			lang("success_35"));
 		redirect(site_url("login"));
+	}
+	public function mobile_registration(){
+		print_r($this->session->userdata("mobile_otp"));
+		$this->template->set_page_title("Login");
+		$this->template->set_error_view("error/login_error.php");
+		$this->template->set_layout("layout/login_layout.php");
+		if ($this->user_model->check_block_ip()) {
+			$this->template->error(lang("error_26"));
+		}
+		if ($this->user->loggedin) {
+			redirect(base_url());
+		}
+		$this->template->loadContent("register/mobile_registration.php", array());
+	}
+
+	public function otp_varification(){
+		$mobile_otp = $this->session->userdata("mobile_otp");
+		$otp = $this->input->get("otpnumber");
+		if (!$otp){
+			echo lang("error_194");
+		}else{
+			if($mobile_otp == $otp){
+				$mobile_no = $this->session->userdata("mobile_number");
+				$this->db->where("email",$mobile_no);
+				$this->db->update("users",array('active'=>1));
+				echo "success";
+				$this->session->unset_userdata("mobile_otp");
+			}else{
+				echo lang("error_194");
+			}
+		}
+	}
+	public function resend_otp(){
+		$mobile_no = $this->session->userdata("mobile_number");
+		$this->session->unset_userdata("mobile_otp");
+    	$otp = rand(100000,999999);
+		$this->session->set_userdata("mobile_otp",$otp);
+		mobile_otp($mobile_no);
 	}
 }
 

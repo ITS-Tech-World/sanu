@@ -130,7 +130,7 @@ $lang['success_115'] = "The invite was deleted!";
 
 //v1.4
 $lang['success_116'] = "The social media account was deauthoized and will no longer be able to login using it.";
-$lang['success_117'] = "";
+$lang['success_117'] = "Please enter OTP from your SMS message";
 $lang['success_118'] = "";
 $lang['success_119'] = "";
 $lang['success_120'] = "";

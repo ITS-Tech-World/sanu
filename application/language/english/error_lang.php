@@ -17,7 +17,7 @@ $lang['error_14'] = "Username must be at least 3 characters!";
 $lang['error_15'] = "Username can only contain letters, numbers and underscores!";
 $lang['error_16'] = "That username is already in use!";
 $lang['error_17'] = "Your password must be at least 6 characters long.";
-$lang['error_18'] = "Email cannot be empty!";
+$lang['error_18'] = "This field cannot be empty!";
 $lang['error_19'] = "You did not enter a valid Email Address!";
 $lang['error_20'] = "That email address is already in use!";
 $lang['error_21'] = "Upload Error:";
@@ -207,8 +207,8 @@ $lang['error_191'] = "The max amount of images that can be uploaded at one time 
 
 //v1.4
 $lang['error_192'] = "You must add a password before you can deauthorize your social media account!";
-$lang['error_193'] = "";
-$lang['error_194'] = "";
+$lang['error_193'] = "You did not enter a valid email or mobile number!";
+$lang['error_194'] = "You did not enter a valid OTP";
 $lang['error_195'] = "";
 $lang['error_196'] = "";
 $lang['error_197'] = "";

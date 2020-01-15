@@ -123,11 +123,13 @@
             <li>
               <?php echo form_open(site_url(), array("class"=>"navbar-form")) ?>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="<?php echo lang("ctn_76") ?> ..." id="search-complete">
+                <input type="text" class="form-control" placeholder="<?php echo lang("ctn_76") ?> ..." id="search-complete" style="width: 300px;">
               </div>
               <?php echo form_close() ?>
             </li>
           <?php if($this->user->loggedin) : ?>
+            <li><a href="<?php echo site_url() ?>"><span class="glyphicon glyphicon-home notification-icon"></span></a></li>
+            <li><a href="<?php echo site_url("profile/" . $this->user->info->username) ?>"><span class="glyphicon glyphicon-user notification-icon"></span></a></li>
             <li><a href="#" data-target="#" onclick="load_notifications()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="noti-menu-drop"><span class="glyphicon glyphicon-bell notification-icon"></span><?php if($this->user->info->noti_count > 0) : ?><span class="badge notification-badge small-text"><?php echo $this->user->info->noti_count ?></span><?php endif; ?></a>
         
             <ul class="dropdown-menu" aria-labelledby="noti-menu-drop">
