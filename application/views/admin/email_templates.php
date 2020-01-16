@@ -20,7 +20,7 @@
 </div>
 </div>
 
-<input type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addModal" value="<?php echo lang("ctn_407") ?>">
+<input type="button" class="btn btn-post btn-sm" data-toggle="modal" data-target="#addModal" value="<?php echo lang("ctn_407") ?>">
 
 </div>
 </div>

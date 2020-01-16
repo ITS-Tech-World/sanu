@@ -23,7 +23,7 @@
 </div>
 </div>
 
-    <input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_73") ?>" data-toggle="modal" data-target="#memberModal" />
+    <input type="button" class="btn btn-post btn-sm" value="<?php echo lang("ctn_73") ?>" data-toggle="modal" data-target="#memberModal" />
 </div>
 </div>
 

@@ -1,7 +1,7 @@
 <div class="white-area-content">
 <div class="db-header clearfix">
     <div class="page-header-title"> <span class="glyphicon glyphicon-user"></span> <?php echo lang("ctn_1") ?></div>
-    <div class="db-header-extra">      <input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_811") ?>" data-toggle="modal" data-target="#addModal" />
+    <div class="db-header-extra">      <input type="button" class="btn btn-post btn-sm" value="<?php echo lang("ctn_811") ?>" data-toggle="modal" data-target="#addModal" />
 </div>
 </div>
 
@@ -128,7 +128,7 @@ function set_search_icon(icon, options)
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_811") ?>" />
+        <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_811") ?>" />
         <?php echo form_close() ?>
       </div>
     </div>
