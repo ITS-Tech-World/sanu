@@ -34,7 +34,7 @@
         </div>
 </div>
 
-<input type="submit" class="form-control btn btn-primary" value="<?php echo lang("ctn_13") ?>" />
+<input type="submit" class="form-control btn btn-post" value="<?php echo lang("ctn_13") ?>" />
 <?php echo form_close() ?>
 </div>
 </div>

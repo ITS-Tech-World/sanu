@@ -121,13 +121,13 @@
                     	<?php endif; ?>
                     </div>
             </div>
-            <input type="button" class="btn btn-primary btn-xs" value="<?php echo lang("ctn_717") ?>" id="add_answer_edit">
+            <input type="button" class="btn btn-post btn-xs" value="<?php echo lang("ctn_717") ?>" id="add_answer_edit">
             <input type="hidden" name="poll_answers" value="<?php echo $poll_answers_count ?>" id="poll_answers_edit">
     </div>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-<input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_494") ?>">
+<input type="submit" class="btn btn-post" value="<?php echo lang("ctn_494") ?>">
 </div>
 
 <?php echo form_close() ?>

@@ -49,7 +49,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_61") ?>" />
+        <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_61") ?>" />
         <?php echo form_close() ?>
       </div>
     </div>

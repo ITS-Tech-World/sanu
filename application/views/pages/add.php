@@ -5,7 +5,7 @@
         		
         		<div class="db-header clearfix">
 				    <div class="page-header-title"> <span class="glyphicon glyphicon-file"></span> <?php echo lang("ctn_531") ?></div>
-				    <div class="db-header-extra"> <a href="<?php echo site_url("pages/add") ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_531") ?></a>
+				    <div class="db-header-extra"> <a href="<?php echo site_url("pages/add") ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_531") ?></a>
 				</div>
 				</div>
 
@@ -133,7 +133,7 @@
                     </div>
                 </div>
 
-                <input type="submit" class="btn btn-primary form-control" value="<?php echo lang("ctn_531") ?>">
+                <input type="submit" class="btn btn-post form-control" value="<?php echo lang("ctn_531") ?>">
 
                 </div>
                 </div>

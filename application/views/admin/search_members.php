@@ -30,7 +30,7 @@
     <option value="3"><?php echo lang("ctn_80") ?></option>
     </select>
   </div>
-  <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_76") ?>" />
+  <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_76") ?>" />
 <?php echo form_close() ?>
 
 <hr>

@@ -17,7 +17,7 @@
 
 <p>The base CSS of this site use's <a href="http://getbootstrap.com/">Bootstrap</a>. That means you have lots of elements to use for free on your website straight out of the box. Here are a few below!</p>
 
-<p><input type="button" class="btn btn-default" value="Button" /> <input type="button" class="btn btn-primary" value="Button" /> <input type="button" class="btn btn-info" value="Button" /> <input type="button" class="btn btn-success" value="Button" /> <input type="button" class="btn btn-warning" value="Button" /> <input type="button" class="btn btn-danger" value="Button" /></p>
+<p><input type="button" class="btn btn-default" value="Button" /> <input type="button" class="btn btn-post" value="Button" /> <input type="button" class="btn btn-info" value="Button" /> <input type="button" class="btn btn-success" value="Button" /> <input type="button" class="btn btn-warning" value="Button" /> <input type="button" class="btn btn-danger" value="Button" /></p>
 
 <hr>
 

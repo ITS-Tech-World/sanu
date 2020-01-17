@@ -1539,9 +1539,9 @@ class Pages extends CI_Controller
 
 		foreach($albums->result() as $r) {
 			if($member != null && $member->roleid == 1) {
-				$options = '<a href="'.site_url("pages/view_album/" . $r->ID).'" class="btn btn-primary btn-xs">'.lang("ctn_657").'</a> <a href="javascript:void(0)" onclick="edit_album('.$r->ID.')" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-cog"></span></a> <a href="'.site_url("pages/delete_album/" . $r->ID . "/" . $this->security->get_csrf_hash()).'" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>';
+				$options = '<a href="'.site_url("pages/view_album/" . $r->ID).'" class="btn style="color:#FFF; background:#a41be3;" btn-xs">'.lang("ctn_657").'</a> <a href="javascript:void(0)" onclick="edit_album('.$r->ID.')" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-cog"></span></a> <a href="'.site_url("pages/delete_album/" . $r->ID . "/" . $this->security->get_csrf_hash()).'" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>';
 			} else {
-				$options = '<a href="'.site_url("pages/view_album/" . $r->ID).'" class="btn btn-primary btn-xs">'.lang("ctn_657").'</a>';
+				$options = '<a style="color:#FFF; background-color:#a41be3;" href="'.site_url("pages/view_album/" . $r->ID).'" class="btn btn-xs">'.lang("ctn_657").'</a>';
 			}
 			if(isset($r->file_name)) {
 				$image = '<img src="'. base_url() . $this->settings->info->upload_path_relative . '/' . $r->file_name .'" width="50">';

@@ -29,7 +29,7 @@
 					    	<input type="text" class="form-control" id="username" name="username" value="<?php if(isset($username)) echo $username; ?>">
 					    </div>
 			  	</div>
-			 <input type="submit" name="s" value="<?php echo lang("ctn_211") ?>" class="btn btn-primary form-control" />
+			 <input type="submit" name="s" value="<?php echo lang("ctn_211") ?>" class="btn btn-post form-control" />
     <?php echo form_close() ?>
     </div>
     </div>

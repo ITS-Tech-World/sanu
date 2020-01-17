@@ -65,7 +65,7 @@
 			</div>
 	  	</div>
 
-	<input type="submit" class="btn btn-primary form-control" name="s" value="Install">
+	<input type="submit" class="btn btn-post form-control" name="s" value="Install">
 	<?php echo form_close() ?>
 	</div>
 </div>

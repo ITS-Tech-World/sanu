@@ -63,7 +63,7 @@
 </div>
 
 <hr>
-<input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_13") ?>">
+<input type="submit" class="btn btn-post" value="<?php echo lang("ctn_13") ?>">
 <?php echo form_close() ?>
 
 </div>

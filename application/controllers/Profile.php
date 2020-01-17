@@ -378,9 +378,9 @@ class Profile extends CI_Controller
 
 		foreach($albums->result() as $r) {
 			if( ($this->user->loggedin && $user->ID == $this->user->info->ID) || $this->common->has_permissions(array("admin","admin_members"), $this->user)) {
-				$options = '<a href="'.site_url("profile/view_album/" . $r->ID).'" class="btn btn-primary btn-xs">'.lang("ctn_657").'</a> <a href="javascript:void(0)" onclick="edit_album('.$r->ID.')" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-cog"></span></a> <a href="'.site_url("profile/delete_album/" . $r->ID . "/" . $this->security->get_csrf_hash()).'" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>';
+				$options = '<a href="'.site_url("profile/view_album/" . $r->ID).'" class="btn btn-xs" style="color:#FFF; background:#a41be3;">'.lang("ctn_657").'</a> <a href="javascript:void(0)" onclick="edit_album('.$r->ID.')" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-cog"></span></a> <a href="'.site_url("profile/delete_album/" . $r->ID . "/" . $this->security->get_csrf_hash()).'" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>';
 			} else {
-				$options = '<a href="'.site_url("profile/view_album/" . $r->ID).'" class="btn btn-primary btn-xs">'.lang("ctn_657").'</a>';
+				$options = '<a href="'.site_url("profile/view_album/" . $r->ID).'" class="btn btn-post btn-xs">'.lang("ctn_657").'</a>';
 			}
 			if(isset($r->file_name)) {
 				$image = '<img src="'. base_url() . $this->settings->info->upload_path_relative . '/' . $r->file_name .'" width="50">';

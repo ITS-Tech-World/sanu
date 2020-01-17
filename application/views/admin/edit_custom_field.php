@@ -75,7 +75,7 @@
                             <span class="help-block"><?php echo lang("ctn_370") ?></span>
                         </div>
                 </div>
-<input type="submit" class="btn btn-primary btn-sm form-control" value="<?php echo lang("ctn_371") ?>" />
+<input type="submit" class="btn btn-post btn-sm form-control" value="<?php echo lang("ctn_371") ?>" />
 <?php echo form_close() ?>
 </div>
 </div>

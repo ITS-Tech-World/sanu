@@ -72,7 +72,7 @@ if(isset($postAs)) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="button" class="btn btn-primary" value="<?php echo lang("ctn_356") ?>" data-dismiss="modal">
+        <input type="button" class="btn btn-post" value="<?php echo lang("ctn_356") ?>" data-dismiss="modal">
       </div>
     </div>
   </div>
@@ -101,7 +101,7 @@ if(isset($postAs)) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="button" class="btn btn-primary" data-dismiss="modal" value="<?php echo lang("ctn_356") ?>">
+        <input type="button" class="btn btn-post" data-dismiss="modal" value="<?php echo lang("ctn_356") ?>">
       </div>
     </div>
   </div>
@@ -124,7 +124,7 @@ if(isset($postAs)) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="button" class="btn btn-primary" data-dismiss="modal" value="<?php echo lang("ctn_356") ?>">
+        <input type="button" class="btn btn-post" data-dismiss="modal" value="<?php echo lang("ctn_356") ?>">
       </div>
     </div>
   </div>
@@ -149,7 +149,7 @@ if(isset($postAs)) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="button" class="btn btn-primary" value="<?php echo lang("ctn_356") ?>" data-dismiss="modal">
+        <input type="button" class="btn btn-post" value="<?php echo lang("ctn_356") ?>" data-dismiss="modal">
       </div>
     </div>
   </div>
@@ -208,12 +208,12 @@ if(isset($postAs)) {
                         </div>
                     </div>
             </div>
-            <input type="button" class="btn btn-primary btn-xs" value="<?php echo lang("ctn_717") ?>" id="add_answer">
+            <input type="button" class="btn btn-post btn-xs" value="<?php echo lang("ctn_717") ?>" id="add_answer">
             <input type="hidden" name="poll_answers" value="5" id="poll_answers">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="button" class="btn btn-primary" value="<?php echo lang("ctn_718") ?>" data-dismiss="modal">
+        <input type="button" class="btn btn-post" value="<?php echo lang("ctn_718") ?>" data-dismiss="modal">
       </div>
     </div>
   </div>

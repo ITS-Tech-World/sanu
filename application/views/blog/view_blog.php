@@ -7,7 +7,7 @@
                         <h1><a href="<?php echo site_url("blog/view_blog/". $blog->ID) ?>"><?php echo $blog->title ?></a></h1>
                         <p><?php echo $blog->description ?></p>
                         <?php if($check && $check->num_rows() == 0) : ?>
-                        <p><a href="<?php echo site_url("blog/subscribe/" . $blog->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_820") ?></a></p>
+                        <p><a href="<?php echo site_url("blog/subscribe/" . $blog->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_820") ?></a></p>
                         <?php else : ?>
                         <p><a href="<?php echo site_url("blog/unsubscribe/" . $blog->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-danger btn-sm"><?php echo lang("ctn_821") ?></a></p>
                         <?php endif; ?>
