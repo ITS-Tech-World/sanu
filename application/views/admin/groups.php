@@ -1,7 +1,7 @@
 <div class="white-area-content">
 <div class="db-header clearfix">
     <div class="page-header-title"> <span class="glyphicon glyphicon-user"></span> <?php echo lang("ctn_1") ?></div>
-    <div class="db-header-extra"><input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_14") ?>" data-toggle="modal" data-target="#memberModal" />
+    <div class="db-header-extra"><input type="button" class="btn btn-post btn-sm" value="<?php echo lang("ctn_14") ?>" data-toggle="modal" data-target="#memberModal" />
 </div>
 </div>
 
@@ -18,7 +18,7 @@
 <table class="table table-bordered">
 <tr class="table-header"><td><?php echo lang("ctn_18") ?></td><td><?php echo lang("ctn_19") ?></td><td><?php echo lang("ctn_52") ?></td></tr>
 <?php foreach($groups->result() as $r) : ?>
-<tr><td><?php echo $r->name ?></td><td><?php if($r->default) { echo lang("ctn_53");}else{ echo lang("ctn_54"); } ?></td><td><a href="<?php echo site_url("admin/edit_group/" . $r->ID) ?>" class="btn btn-warning btn-xs" title="<?php echo lang("ctn_55") ?>"><span class="glyphicon glyphicon-cog"></span></a> <a href="<?php echo site_url("admin/delete_group/" . $r->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-danger btn-xs" onclick="return confirm('<?php echo lang("ctn_56") ?>')" title="<?php echo lang("ctn_57") ?>"><span class="glyphicon glyphicon-trash"></span></a> <a href="<?php echo site_url("admin/view_group/" . $r->ID) ?>" class="btn btn-primary btn-xs"><?php echo lang("ctn_58") ?></a></td></tr>
+<tr><td><?php echo $r->name ?></td><td><?php if($r->default) { echo lang("ctn_53");}else{ echo lang("ctn_54"); } ?></td><td><a href="<?php echo site_url("admin/edit_group/" . $r->ID) ?>" class="btn btn-warning btn-xs" title="<?php echo lang("ctn_55") ?>"><span class="glyphicon glyphicon-cog"></span></a> <a href="<?php echo site_url("admin/delete_group/" . $r->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-danger btn-xs" onclick="return confirm('<?php echo lang("ctn_56") ?>')" title="<?php echo lang("ctn_57") ?>"><span class="glyphicon glyphicon-trash"></span></a> <a href="<?php echo site_url("admin/view_group/" . $r->ID) ?>" class="btn btn-post btn-xs"><?php echo lang("ctn_58") ?></a></td></tr>
 <?php endforeach; ?>
 </table>
 

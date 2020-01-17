@@ -27,7 +27,7 @@
 
 	?>
 <div class="active_chat_bubble active_chat_window" id="active_chat_bubble_<?php echo $r->ID ?>">
-<div class="chat-top-bar"><?php echo $r->title ?> <div class="pull-right"> <span class="glyphicon glyphicon-minus click chat-icon" onclick="close_active_chat_window(<?php echo $r->ID ?>)"></span> <span class="glyphicon glyphicon-remove click chat-icon" onclick="hide_chat_window(<?php echo $r->ID ?>)"></span></div></div>
+<div class="chat-top-bar"><a style="text-decoration: none;color:#FFF;" href="<?php echo site_url("profile/" . $this->user->info->username) ?>" class="chat_title"><?php echo $r->title ?></a><div class="pull-right"> <span class="glyphicon glyphicon-minus click chat-icon" onclick="close_active_chat_window(<?php echo $r->ID ?>)"></span> <span class="glyphicon glyphicon-remove click chat-icon" onclick="hide_chat_window(<?php echo $r->ID ?>)"></span></div></div>
 <div class="chat-chat-body" id="active_chat_window_<?php echo $r->ID ?>">
 	<?php foreach($msgs as $msg) : ?>
 		<div class="media chat-messages-block">

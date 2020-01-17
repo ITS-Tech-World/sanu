@@ -119,15 +119,21 @@
         <?php endif; ?>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-center" style="margin-left: 50px;">
             <li>
               <?php echo form_open(site_url(), array("class"=>"navbar-form")) ?>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="<?php echo lang("ctn_76") ?> ..." id="search-complete">
+                <input type="text" class="form-control" placeholder="<?php echo lang("ctn_76") ?> ..." id="search-complete" style="width: 450px;">
               </div>
               <?php echo form_close() ?>
             </li>
           <?php if($this->user->loggedin) : ?>
+            <li style="margin-left: 130px;"><a href="<?php echo site_url() ?>"><span class="glyphicon glyphicon-home notification-icon"></span></a></li>
+            <li class="user_bit"><img src="<?php echo base_url() ?><?php echo $this->settings->info->upload_path_relative ?>/<?php echo $this->user->info->avatar ?>" class="user_avatar"><a href="<?php echo site_url("profile/" . $this->user->info->username) ?>"><?php if($this->settings->info->user_display_type) : ?>
+              <?php echo $this->user->info->first_name ?> <?php echo $this->user->info->last_name ?>
+              <?php else : ?>
+              <?php echo $this->user->info->username ?>
+              <?php endif; ?></a></li>
             <li><a href="#" data-target="#" onclick="load_notifications()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="noti-menu-drop"><span class="glyphicon glyphicon-bell notification-icon"></span><?php if($this->user->info->noti_count > 0) : ?><span class="badge notification-badge small-text"><?php echo $this->user->info->noti_count ?></span><?php endif; ?></a>
         
             <ul class="dropdown-menu" aria-labelledby="noti-menu-drop">
@@ -165,11 +171,7 @@
             </ul>
 
             </li>
-            <li class="user_bit"><img src="<?php echo base_url() ?><?php echo $this->settings->info->upload_path_relative ?>/<?php echo $this->user->info->avatar ?>" class="user_avatar"> <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><?php if($this->settings->info->user_display_type) : ?>
-              <?php echo $this->user->info->first_name ?> <?php echo $this->user->info->last_name ?>
-              <?php else : ?>
-              <?php echo $this->user->info->username ?>
-              <?php endif; ?></a>
+            <li class="user_bit"><a href="javascript:void(0)" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="glyphicon glyphicon-chevron-down notification-icon"></span></a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               <li><a href="<?php echo site_url() ?>"><?php echo lang("ctn_2") ?></a></li>
               <li><a href="<?php echo site_url("profile/" . $this->user->info->username) ?>"><?php echo lang("ctn_491") ?></a></li>

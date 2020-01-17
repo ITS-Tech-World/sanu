@@ -97,7 +97,7 @@
 </div>
 
 
-<input type="submit" class="btn btn-primary form-control" value="<?php echo lang("ctn_13") ?>" />
+<input type="submit" class="btn btn-post form-control" value="<?php echo lang("ctn_13") ?>" />
 <?php echo form_close() ?>
 
 </div>

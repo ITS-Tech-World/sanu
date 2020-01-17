@@ -3,7 +3,7 @@
     <div class="page-header-title"> <span class="glyphicon glyphicon-user"></span> <?php echo lang("ctn_1") ?></div>
     <div class="db-header-extra form-inline">
 
-    <input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_373") ?>" data-toggle="modal" data-target="#memberModal" />
+    <input type="button" class="btn btn-post btn-sm" value="<?php echo lang("ctn_373") ?>" data-toggle="modal" data-target="#memberModal" />
 </div>
 </div>
 
