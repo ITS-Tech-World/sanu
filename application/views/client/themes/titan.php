@@ -119,16 +119,16 @@
         <?php endif; ?>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-center" style="margin-left: 50px;">
+          <ul class="nav navbar-nav navbar-right">
             <li>
               <?php echo form_open(site_url(), array("class"=>"navbar-form")) ?>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="<?php echo lang("ctn_76") ?> ..." id="search-complete" style="width: 450px;">
+                <input type="text" class="form-control" placeholder="<?php echo lang("ctn_76") ?> ..." id="search-complete" style="width:450px;">
               </div>
               <?php echo form_close() ?>
             </li>
           <?php if($this->user->loggedin) : ?>
-            <li style="margin-left: 130px;"><a href="<?php echo site_url() ?>"><span class="glyphicon glyphicon-home notification-icon"></span></a></li>
+            <li><a href="<?php echo site_url() ?>"><span class="glyphicon glyphicon-home notification-icon"></span></a></li>
             <li class="user_bit"><img src="<?php echo base_url() ?><?php echo $this->settings->info->upload_path_relative ?>/<?php echo $this->user->info->avatar ?>" class="user_avatar"><a href="<?php echo site_url("profile/" . $this->user->info->username) ?>"><?php if($this->settings->info->user_display_type) : ?>
               <?php echo $this->user->info->first_name ?> <?php echo $this->user->info->last_name ?>
               <?php else : ?>
