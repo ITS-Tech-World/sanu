@@ -774,6 +774,33 @@ class User_Settings extends CI_Controller
 		redirect(site_url("user_settings/social_networks"));
 	}
 
+	public function change_profile_cover(){
+		echo "Succcess";exit;
+		if ($_FILES['userfile_profile']['size'] > 0) {
+			$this->upload->initialize(array( 
+		       "upload_path" => $this->settings->info->upload_path,
+		       "overwrite" => FALSE,
+		       "max_filename" => 300,
+		       "encrypt_name" => TRUE,
+		       "remove_spaces" => TRUE,
+		       "allowed_types" => "gif|png|jpg|jpeg",
+		       "max_size" => $this->settings->info->file_size
+		    ));
+
+		    if (!$this->upload->do_upload("userfile_profile")) {
+		    	$this->template->error(lang("error_21")
+		    	.$this->upload->display_errors());
+		    }
+
+		    $data = $this->upload->data();
+
+		    $profile_header = $data['file_name'];
+		} else {
+			$profile_header = $this->user->info->profile_header;
+		}
+	}
+
+
 }
 
 ?>

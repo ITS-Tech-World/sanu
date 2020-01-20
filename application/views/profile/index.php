@@ -29,13 +29,20 @@ function load_posts(userid)
  <div class="col-md-12">
 
 
- <div class="profile-header" style="background: url(<?php echo base_url() ?><?php echo $this->settings->info->upload_path_relative . "/" . $user->profile_header ?>) center center; background-size: cover;">
+ <div class="profile-header" id="profile_cover_image" style="background: url(<?php echo base_url() ?><?php echo $this->settings->info->upload_path_relative . "/" . $user->profile_header ?>) center center; background-size: cover;">
  <div class="profile-header-avatar">
 	<img src="<?php echo base_url() ?>/<?php echo $this->settings->info->upload_path_relative ?>/<?php echo $user->avatar ?>">
  </div>
+ 
  <div class="profile-header-name">
 <?php echo $user->first_name ?> <?php echo $user->last_name ?> <?php if($user->verified) : ?><img src="<?php echo base_url() ?>images/verified_badge.png" width="14" data-placement="top" data-toggle="tooltip" title="<?php echo lang("ctn_695") ?>"><?php endif; ?>
  </div>
+ <div class="profile-cover-edit-button" hidden="true">
+   <button class="btn btn-post" style="border-radius: 20px;" onclick="save_image()">Edit</button>
+ </div>
+ <!-- <?php if($this->settings->info->avatar_upload) : ?>
+        <input type="file" name="userfile_profile" id="chose_cover_image" onchange="preview_image()" style="display: none;" /> 
+       <?php endif; ?> -->
  </div>
  <div class="profile-header-bar clearfix">
  <ul>
@@ -43,7 +50,9 @@ function load_posts(userid)
   <li><a href="<?php echo site_url("profile/friends/" . $user->ID) ?>"><?php echo lang("ctn_493") ?></a></li>
   <li><a href="<?php echo site_url("profile/albums/" . $user->ID) ?>"><?php echo lang("ctn_483") ?></a></li>
  </ul>
-
+<!-- <div class="pull-right profile-friend-box">
+  <button class="btn btn-success" onclick="save_image()">Save</button>
+</div> -->
  <div class="pull-right profile-friend-box">
   <?php if($this->user->loggedin) : ?>
  	<?php if($user->ID != $this->user->info->ID) : ?>
@@ -274,3 +283,33 @@ function load_posts(userid)
 </div>
 <?php echo form_close() ?>
 <?php endif; ?>
+
+<script type="text/javascript">
+  $("#profile_cover_image").on("mouseenter", function () {
+    $(".profile-cover-edit-button").show();
+  });
+  $("#profile_cover_image").on("mouseleave", function () {
+    $(".profile-cover-edit-button").hide();
+  });
+
+  // function chose_image(){
+  //   $("#chose_cover_image").click();
+  // }
+  function preview_image(){
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById("chose_cover_image").files[0]);
+
+    oFReader.onload = function (oFREvent) {
+        $("#profile_cover_image").css("background-image","url("+oFREvent.target.result+")");
+    };
+  }
+  function save_image(){
+    $.ajax({
+      type: "get",
+      //url: global_base_url + "user_settings",
+      success:function(data){
+        window.location.href = global_base_url + "user_settings";
+      }
+    });
+  }
+</script>
