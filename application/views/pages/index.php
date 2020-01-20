@@ -27,7 +27,7 @@
 
                             <?php if( ($this->common->has_permissions(array("admin", "page_admin", "page_creator"), $this->user)) ) : ?> 
 
-                        <a href="<?php echo site_url("pages/add") ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_531") ?></a>
+                        <a href="<?php echo site_url("pages/add") ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_531") ?></a>
                       <?php endif; ?>
 				</div>
 				</div>

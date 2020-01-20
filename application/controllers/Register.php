@@ -132,7 +132,7 @@ class Register extends CI_Controller
 			}
 
 			if($this->session->userdata("mobile_otp")){
-				if ($email != '/^[0-9,]+$/')) {
+				if ($email != '/^[0-9,]+$/') {
 					$field_errors['email'] = lang("error_193");
 				}
 			}else{

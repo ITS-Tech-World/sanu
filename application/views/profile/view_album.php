@@ -43,7 +43,7 @@
     <div class="db-header-extra form-inline"> 
 
 <?php if( ($this->user->loggedin && $album->userid == $this->user->info->ID) || $this->common->has_permissions(array("admin","admin_members"), $this->user)) : ?>
-<input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_581") ?>" data-toggle="modal" data-target="#addModal"> <input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_582") ?>" data-toggle="modal" data-target="#addMultiModal">
+<input type="button" class="btn btn-post btn-sm" value="<?php echo lang("ctn_581") ?>" data-toggle="modal" data-target="#addModal"> <input type="button" class="btn btn-post btn-sm" value="<?php echo lang("ctn_582") ?>" data-toggle="modal" data-target="#addMultiModal">
 <?php endif; ?>
 
 </div>
@@ -137,7 +137,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_584") ?>">
+        <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_584") ?>">
       </div>
     </div>
   </div>
@@ -178,7 +178,7 @@
           <?php if($this->settings->info->limit_max_photos_post > 0) : ?>
             <p><?php echo lang("ctn_833") ?>: <?php echo $this->settings->info->limit_max_photos_post ?></p>
           <?php endif; ?>
-	        <input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_589") ?>" onclick="add_photo()">
+	        <input type="button" class="btn btn-post btn-sm" value="<?php echo lang("ctn_589") ?>" onclick="add_photo()">
 
           <div class="form-group">
                     <label for="p-in" class="col-md-4 label-heading"><?php echo lang("ctn_574") ?></label>
@@ -190,7 +190,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_584") ?>">
+        <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_584") ?>">
       </div>
     </div>
   </div>

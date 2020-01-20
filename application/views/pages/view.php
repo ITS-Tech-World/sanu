@@ -54,9 +54,9 @@ function load_posts(pageid)
   <?php if($this->user->loggedin) : ?>
   <?php if($member == null) : ?>
     <?php if($page->pay_to_join > 0) : ?>
-    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#joinModal"><?php echo lang("ctn_554") ?></button>
+    <button type="button" class="btn btn-post btn-sm" data-toggle="modal" data-target="#joinModal"><?php echo lang("ctn_554") ?></button>
     <?php else : ?>
-    <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_554") ?></a>
+    <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_554") ?></a>
     <?php endif; ?>
   <?php else : ?>
     <a href="<?php echo site_url("pages/leave_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> <?php echo lang("ctn_34") ?></a> 
@@ -219,7 +219,7 @@ function load_posts(pageid)
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_578") ?>">
+        <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_578") ?>">
       </div>
     </div>
   </div>
@@ -239,7 +239,7 @@ function load_posts(pageid)
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_554") ?></a>
+        <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_554") ?></a>
       </div>
     </div>
   </div>

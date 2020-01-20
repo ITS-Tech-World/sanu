@@ -26,7 +26,7 @@
  <div class="pull-right profile-friend-box">
 
  <?php if($member == null) : ?>
-    <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_554") ?></a>
+    <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_554") ?></a>
   <?php else : ?>
     <a href="<?php echo site_url("pages/leave_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> <?php echo lang("ctn_34") ?></a> 
   <?php endif; ?>
@@ -112,7 +112,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_569") ?>">
+        <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_569") ?>">
         <?php echo form_close() ?>
       </div>
     </div>
@@ -178,7 +178,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_13") ?>">
+        <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_13") ?>">
         <?php echo form_close() ?>
       </div>
   <?php else : ?>

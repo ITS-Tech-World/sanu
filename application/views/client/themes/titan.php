@@ -103,7 +103,7 @@
     </head>
     <body>
 
-    <nav class="navbar navbar-inverse navbar-header2">
+    <nav class="navbar navbar-inverse navbar-header2 navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -119,16 +119,16 @@
         <?php endif; ?>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-center" style="margin-left: 50px;">
+          <ul class="nav navbar-nav navbar-right">
             <li>
               <?php echo form_open(site_url(), array("class"=>"navbar-form")) ?>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="<?php echo lang("ctn_76") ?> ..." id="search-complete" style="width: 450px;">
+                <input type="text" class="form-control" placeholder="<?php echo lang("ctn_76") ?> ..." id="search-complete" style="width:450px;">
               </div>
               <?php echo form_close() ?>
             </li>
           <?php if($this->user->loggedin) : ?>
-            <li style="margin-left: 130px;"><a href="<?php echo site_url() ?>"><span class="glyphicon glyphicon-home notification-icon"></span></a></li>
+            <li><a href="<?php echo site_url() ?>"><span class="glyphicon glyphicon-home notification-icon"></span></a></li>
             <li class="user_bit"><img src="<?php echo base_url() ?><?php echo $this->settings->info->upload_path_relative ?>/<?php echo $this->user->info->avatar ?>" class="user_avatar"><a href="<?php echo site_url("profile/" . $this->user->info->username) ?>"><?php if($this->settings->info->user_display_type) : ?>
               <?php echo $this->user->info->first_name ?> <?php echo $this->user->info->last_name ?>
               <?php else : ?>
@@ -194,12 +194,7 @@
       </div>
     </nav>
 
-    <div class="sidebar">
-      <?php if(isset($sidebar)) : ?>
-          <?php echo $sidebar ?>
-        <?php endif; ?>
-          <?php include(APPPATH . "views/client/friends_bar.php") ?>
-    </div>
+
 
 
     <div id="main-content">
@@ -208,22 +203,18 @@
          <div class="container">
           <div class="row">
           <!-- <div class="col-md-12 col-md-offset-sidebar"> -->
-            <div class="col-md-12">
+            <div class="col-md-10">
 
         <?php if($this->settings->info->install) : ?>
           <div class="row">
-                        <div class="col-md-12">
-                                <div class="alert alert-info"><b>NOTICE</b> - <a href="<?php echo site_url("install") ?>">Great job on uploading all the files and setting up the site correctly! Let's now create the Admin account and set the default settings. Click here! This message will disappear once you have run the install process.</a></div>
-                        </div>
-                    </div>
+            <div class="col-md-12">
+                    <div class="alert alert-info"><b>NOTICE</b> - <a href="<?php echo site_url("install") ?>">Great job on uploading all the files and setting up the site correctly! Let's now create the Admin account and set the default settings. Click here! This message will disappear once you have run the install process.</a></div>
+            </div>
+        </div>
         <?php endif; ?>
       <?php $gl = $this->session->flashdata('globalmsg'); ?>
         <?php if(!empty($gl)) :?>
-                    <div class="row">
-                        <div class="col-md-12">
-                                <div class="alert alert-success"><b><span class="glyphicon glyphicon-ok"></span></b> <?php echo $this->session->flashdata('globalmsg') ?></div>
-                        </div>
-                    </div>
+          <div class="alert alert-success"><b><span class="glyphicon glyphicon-ok"></span></b> <?php echo $this->session->flashdata('globalmsg') ?></div>
         <?php endif; ?>
 
      
@@ -231,7 +222,15 @@
         <?php echo $content ?>
 
       </div>
+      <div class="col-md-2">
+            <div class="sidebar">
+      <?php if(isset($sidebar)) : ?>
+          <?php echo $sidebar ?>
+        <?php endif; ?>
+          <?php include(APPPATH . "views/client/friends_bar.php") ?>
     </div>
+      </div>
+    <!-- </div> -->
   </div>
 
 

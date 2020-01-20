@@ -185,7 +185,7 @@ foreach($answers->result() as $a) {
 <?php endif; ?>
 <?php endforeach; ?>
 <?php if(!$user_vote) : ?>
-<input type="button" class="btn btn-primary btn-sm pull-right" value="<?php echo lang("ctn_723") ?>" onclick="vote_poll(<?php echo $r->ID ?>, <?php echo $r->poll_type ?>)">
+<input type="button" class="btn btn-post btn-sm pull-right" value="<?php echo lang("ctn_723") ?>" onclick="vote_poll(<?php echo $r->ID ?>, <?php echo $r->poll_type ?>)">
 <?php else : ?>
 <div class="pull-right">
 <?php echo lang("ctn_822") ?>: <?php echo number_format($r->poll_votes) ?>

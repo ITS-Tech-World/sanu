@@ -24,7 +24,7 @@
  <div class="pull-right profile-friend-box">
 
  <?php if($member == null) : ?>
-    <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_554") ?></a>
+    <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_554") ?></a>
   <?php else : ?>
     <a href="<?php echo site_url("pages/leave_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> <?php echo lang("ctn_34") ?></a> 
   <?php endif; ?>
@@ -62,7 +62,7 @@
 </div>
 
 <?php if( (isset($member) && $member != null && $member->roleid == 1) || ($this->common->has_permissions(array("admin", "page_admin"), $this->user)) ) : ?> 
-<input type="button" class="btn btn-primary btn-sm" value="<?php echo lang("ctn_469") ?>" data-toggle="modal" data-target="#addModal">
+<input type="button" class="btn btn-post btn-sm" value="<?php echo lang("ctn_469") ?>" data-toggle="modal" data-target="#addModal">
 <?php endif; ?>
 </div>
 </div>
@@ -110,7 +110,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang("ctn_60") ?></button>
-        <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_469") ?>">
+        <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_469") ?>">
       </div>
     </div>
   </div>

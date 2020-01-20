@@ -18,7 +18,7 @@
           </div>
       </div>
 
-      <input type="submit" name="s" class="btn btn-primary form-control" value="<?php echo lang("ctn_13") ?>">
+      <input type="submit" name="s" class="btn btn-post form-control" value="<?php echo lang("ctn_13") ?>">
       <?php echo form_close() ?>
       </div>
 </div>
@@ -34,7 +34,7 @@
       <input type="text" class="form-control" placeholder="<?php echo lang("ctn_464") ?>" name="username" id="username-search">
   <?php endif; ?>
   </div>
-  <input type="submit" class="btn btn-primary" value="<?php echo lang("ctn_469") ?>">
+  <input type="submit" class="btn btn-post" value="<?php echo lang("ctn_469") ?>">
 <?php echo form_close() ?>
 <?php endif; ?>
 

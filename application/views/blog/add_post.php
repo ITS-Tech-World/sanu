@@ -22,7 +22,7 @@
                             </div>
                             </div>
 
-                            <a href="<?php echo site_url("blog/add_post") ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_781") ?></a> <a href="<?php echo site_url("blog/edit_blog/" . $blog->ID) ?>" class="btn btn-warning btn-sm"><?php echo lang("ctn_782") ?></a> <a href="<?php echo site_url("blog/delete_blog/" . $blog->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-danger btn-sm"><?php echo lang("ctn_783") ?></a>
+                            <a href="<?php echo site_url("blog/add_post") ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_781") ?></a> <a href="<?php echo site_url("blog/edit_blog/" . $blog->ID) ?>" class="btn btn-warning btn-sm"><?php echo lang("ctn_782") ?></a> <a href="<?php echo site_url("blog/delete_blog/" . $blog->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-danger btn-sm"><?php echo lang("ctn_783") ?></a>
                             
 				</div>
 				</div>
@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <input type="submit" class="btn btn-primary form-control" value="<?php echo lang("ctn_506") ?>">
+            <input type="submit" class="btn btn-post form-control" value="<?php echo lang("ctn_506") ?>">
 
             </div>
             </div>

@@ -26,7 +26,7 @@
                         <input type="text" class="form-control" id="email-in" name="description" value="<?php echo $category->description ?>">
                     </div>
             </div>
-<input type="submit" class="btn btn-primary btn-sm form-control" value="<?php echo lang("ctn_13") ?>" />
+<input type="submit" class="btn btn-post btn-sm form-control" value="<?php echo lang("ctn_13") ?>" />
 <?php echo form_close() ?>
 </div>
 </div>

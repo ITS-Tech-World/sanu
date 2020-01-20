@@ -1,7 +1,7 @@
 <div class="white-area-content">
 <div class="db-header clearfix">
     <div class="page-header-title"> <span class="glyphicon glyphicon-user"></span> <?php echo lang("ctn_1") ?></div>
-    <div class="db-header-extra"> <input type="button" class="btn btn-primary btn-sm" value="Add Advert" data-toggle="modal" data-target="#myModal">
+    <div class="db-header-extra"> <input type="button" class="btn btn-post btn-sm" value="Add Advert" data-toggle="modal" data-target="#myModal">
 </div>
 </div>
 
@@ -32,7 +32,7 @@
                             <span class="help-block"><?php echo lang("ctn_704") ?></span>
                         </div>
                 </div>
-<input type="submit" class="btn btn-primary btn-sm form-control" value="<?php echo lang("ctn_13") ?>" />
+<input type="submit" class="btn btn-post btn-sm form-control" value="<?php echo lang("ctn_13") ?>" />
 <?php echo form_close() ?>
 </div>
 </div>

@@ -2,7 +2,7 @@
 
 <div class="db-header clearfix">
     <div class="page-header-title"> <span class="glyphicon glyphicon-piggy-bank"></span> <?php echo lang("ctn_273") ?></div>
-    <div class="db-header-extra"> <a href="<?php echo site_url("funds/payment_log") ?>" class="btn btn-info btn-sm"><?php echo lang("ctn_388") ?></a> <a href="<?php echo site_url("funds") ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_245") ?></a>
+    <div class="db-header-extra"> <a href="<?php echo site_url("funds/payment_log") ?>" class="btn btn-info btn-sm"><?php echo lang("ctn_388") ?></a> <a href="<?php echo site_url("funds") ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_245") ?></a>
 </div>
 </div>
 

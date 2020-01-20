@@ -28,6 +28,6 @@
 
 <div class="mail-reply-textbox">
 <textarea name="reply" rows="5" id="mail-reply-textarea"></textarea>
-<p class="mail-reply-button"><input type="submit" name="s" value="<?php echo lang("ctn_465") ?>" class="btn btn-primary form-control"></p>
+<p class="mail-reply-button"><input type="submit" name="s" value="<?php echo lang("ctn_465") ?>" class="btn btn-post form-control"></p>
 <?php echo form_close() ?>
 </div>

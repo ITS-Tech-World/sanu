@@ -26,7 +26,7 @@
  <div class="pull-right profile-friend-box">
 
  <?php if($member == null) : ?>
-    <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_554") ?></a>
+    <a href="<?php echo site_url("pages/join_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_554") ?></a>
   <?php else : ?>
     <a href="<?php echo site_url("pages/leave_page/" . $page->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> <?php echo lang("ctn_34") ?></a> 
   <?php endif; ?>
@@ -49,7 +49,7 @@
   <hr>
 
   <div class="page-block-tidbit">
-  <p><input type="button" class="btn btn-primary form-control btn-sm" value="<?php echo lang("ctn_591") ?>" onclick="view_list(<?php echo $event->ID ?>,1)"></p>
+  <p><input type="button" class="btn btn-post form-control btn-sm" value="<?php echo lang("ctn_591") ?>" onclick="view_list(<?php echo $event->ID ?>,1)"></p>
   <p> <input type="button" class="btn btn-info form-control btn-sm" value="<?php echo lang("ctn_592") ?>" onclick="view_list(<?php echo $event->ID ?>,0)">
   </div>
 
@@ -67,7 +67,7 @@
     <div class="db-header-extra form-inline">
 
        <?php if($attending == null) : ?>
-    <a href="<?php echo site_url("pages/join_event/" . $event->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_593") ?></a>
+    <a href="<?php echo site_url("pages/join_event/" . $event->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_593") ?></a>
   <?php else : ?>
     <a href="<?php echo site_url("pages/leave_event/" . $event->ID . "/" . $this->security->get_csrf_hash()) ?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> <?php echo lang("ctn_594") ?></a> 
   <?php endif; ?>

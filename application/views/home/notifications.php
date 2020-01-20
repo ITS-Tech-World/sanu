@@ -20,7 +20,7 @@
 </div>
 </div>
 
-<a href="<?php echo site_url("home/read_all_noti/" . $this->security->get_csrf_hash()) ?>" class="btn btn-primary btn-sm"><?php echo lang("ctn_413") ?></a>
+<a href="<?php echo site_url("home/read_all_noti/" . $this->security->get_csrf_hash()) ?>" class="btn btn-post btn-sm"><?php echo lang("ctn_413") ?></a>
 
 </div>
 </div>

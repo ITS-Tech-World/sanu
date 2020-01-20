@@ -401,7 +401,7 @@ class Home extends CI_Controller
 				$this->common->get_user_display(array("username" => $r->username, "avatar" => $r->avatar, "online_timestamp" => $r->online_timestamp)),
 				$msg,
 				date($this->settings->info->date_format, $r->timestamp),
-				$options . ' <a href="'.site_url("home/delete_notification/" . $r->ID . "/" . $this->security->get_csrf_hash()).'" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a> <a href="'.site_url("home/load_notification/" . $r->ID).'" class="btn btn-primary btn-xs">'.lang("ctn_657").'</a>'
+				$options . ' <a href="'.site_url("home/delete_notification/" . $r->ID . "/" . $this->security->get_csrf_hash()).'" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a> <a href="'.site_url("home/load_notification/" . $r->ID).'" class="btn btn-post btn-xs">'.lang("ctn_657").'</a>'
 			);
 		}
 		echo json_encode($this->datatables->process());
